@@ -14,17 +14,29 @@ $post_slug=$post->post_name;
 // * Add the featured image after post title
 add_action( 'genesis_before_entry', 'get_involved_featured_image' );
 function get_involved_featured_image() {
-	echo '<div class="programs-hero-image"><div class="wrap"><div class="hero-content"><div class="donate-desc">';
+	$video_url = get_field("video_url", false, false);
+	$hasVideo = !empty($video_url); 	/*echo ('Video url: ' . $video_url . ' hasVideo: ' . $hasVideo); */
+	if ($hasVideo) {
+		$videoClass = ' video';
+	}
+	else {
+		$videoClass = '';
+	}
+	echo '<div class="programs-hero-image'.$videoClass.'"><div class="wrap"><div class="hero-content"><div class="donate-desc">';
 	echo the_field("donate_text");
 	echo '<h3 class="page-title">';
 	echo the_title() . '</h3></div>';
 	echo the_field("donate_shortcode");
 	echo '</div></div>';
-	if ( $image = genesis_get_image( 'format=url&size=programs' ) ) {
-		printf( '<img src="%s" alt="%s" />', $image, the_title_attribute( 'echo=0' ) );
+	if ($hasVideo) {
+		echo'<video autoplay="" muted="" loop="" width="100%" height="100%" id="myVideo"> <source src="'.$video_url.'" type="video/mp4"> <img src="/wp-content/uploads/2016/12/haiti-now-home-page.jpg" title="Your browser does not support the<video> tag"></video>';
+		echo '</div>';
+	}
+	elseif ( $image = genesis_get_image( 'format=url&size=programs' ) ) {
+		printf( '<img class="firstimg" src="%s" alt="%s" />', $image, the_title_attribute( 'echo=0' ) );
 		echo '</div>';
 	} else {
-		echo '<img src="' . get_bloginfo( 'stylesheet_directory' )
+		echo '<img class="secondimg" src="' . get_bloginfo( 'stylesheet_directory' )
 		. '/images/empty-image.png" /></div>';
 	}
 }
