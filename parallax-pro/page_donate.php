@@ -42,6 +42,15 @@ function programs_featured_image() {
 				}
 
 				?>
+				<!-- Donation shortcode section -->
+				<?php
+				$donate_shortcode = get_field('additional_donation_options');
+				if($donate_shortcode) {
+					echo the_field("additional_donation_options");
+				}
+
+				?>
+
 			</div>
 		</div>
 		<?php

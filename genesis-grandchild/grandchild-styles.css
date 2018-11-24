@@ -644,7 +644,7 @@ to{top:0;}
 .programs-hero-image form button{width:100%;}
 .programs-hero-image .direct-stripe-button{width:100%;padding-top:10px;padding-bottom:8px;margin-top:29px;}
 .programs-hero-image .direct-stripe-button:hover{background-color:#1e73be;color:#fff;}
-.programs-hero-image:after{content:' ';width:100%;height:100%;display:block;position:absolute;top:0;left:0;background:rgba(0, 0, 0, 0.6);}
+.programs-hero-image:after{content:' ';width:100%;height:100%;display:block;position:absolute;top:0;left:0;background:rgba(0, 0, 0, 0.2);}
 .prgram-wrapper{padding:58px 0 27px;position:relative;}
 .prgram-wrapper h2,
 .prgram-wrapper p{position:relative;z-index:100;color:#fff;}
@@ -780,8 +780,9 @@ main.content .movies .image img{max-width:inherit;width:100%;height:auto;positio
 }
 .page-template-page_columns .three-columns > a .entry-content{border:1px solid #7b7b7b;}
 .page-template-page_columns .three-columns > a .entry-content > div{width:100%;height:100%;padding:20px 15px;overflow-y:auto;}
-@media screen and (min-width:769px){@-webkit-keyframes text-off{from{z-index:1;opacity:1;}
-to{z-index:0;opacity:0;}
+@media screen and (min-width:769px){
+@-webkit-keyframes text-off{from{z-index:1;opacity:1;}
+	to{z-index:0;opacity:0;}
 }
 @-moz-keyframes text-off{from{z-index:1;opacity:1;}
 to{z-index:0;opacity:0;}
@@ -856,8 +857,8 @@ main.content .entry-content h2.list-title{font-size:40px;}
 .single-programs .entry-content p{margin:0 0 11px;}
 .single-programs article.entry{padding:0;margin-bottom:63px;}
 .single-programs article.entry .entry-content{width:100%;padding:63px 0 48px;margin:0 auto;clear:both;text-align:center;}
-.single-programs article.entry,
-.single-programs article.entry p{text-align:center;}
+.single-programs article.entry {text-align: center}
+.single-programs article.entry p{text-align:left;}
 .single-programs article.entry ul,
 .single-programs article.entry ol{width:100%;margin:39px 0 0 55px;display:flex;flex-wrap:wrap;}
 @media screen and (max-width:1024px){.single-programs article.entry ul,
@@ -1993,3 +1994,323 @@ to{-ms-transform:scale(1);-moz-transform:scale(1);-webkit-transform:scale(1);tra
 .page-id-1340 main.content article.entry{padding:63px 0 60px;}
 .page-id-1429 main.content article.entry .entry-content iframe,
 .page-id-1340 main.content article.entry .entry-content iframe{margin:0 5px;display:inline-block;}
+
+/* *********** start new custom changes **************** */
+/* all pages */
+.footer-icon {
+	width: auto !important;
+	height: 60px;
+}
+.home-section-1 .wrap, .programs-hero-image .wrap {
+	width: 100% !important;
+}
+/* section 2 about restavek */
+.home-section-2 {
+	background-color: #405395;
+	position: relative;
+	padding: 3em;
+}
+.home-section-2 h2.widget-title, .home-section-2 .textwidget p,
+.home-section-2 .textwidget div{
+    color: white;
+}
+/* remove white margin above picture */
+.site-inner {
+	margin-top: 0 !important;
+}
+/* hero image background */
+.programs-hero-image {
+	background-image: linear-gradient(#000, #405395);
+}
+/* align text left and add bottom padding*/
+p {
+	text-align: left;
+	margin-bottom: 1em !important;
+}
+.programs-hero-image .hero-content .donate-desc, .page-template-page_donate main.content .programs-hero-image .hero-content .donate-desc {
+	text-align: left !important;
+	text-shadow: 1px 1px #333 !important;
+}
+.page-template-page_donate main.content article.entry:nth-of-type(1) .entry-content {
+	padding: 0 !important;
+}
+.home-section-4 h3 {
+	color: #149548;
+}
+.page-template-page_donate main.content article.entry .entry-content {
+	width: 100% !important;
+}
+.home-buttons a {
+	width: 150px;
+}
+/* end all pages */
+
+/* footer */
+
+.home-section-10, .home-section-9, .footer-widgets {
+	position: relative
+}
+.home-section-9.home-odd {
+	padding: 0 0 36px;
+}
+h4.widget-title.widgettitle {
+	margin-top: 2em;
+	text-align: center;
+}
+/* end footer */
+
+.gl-widget__google-pay-button img {
+	max-width: 17%;
+	position: relative;
+}
+.page-template-page_donate main.content .programs-hero-image h1 {
+	width: 100%;
+	color: #fff;
+	font: 900 28px Roboto, sans-serif;
+	line-height: normal;
+	font-size: 36px
+}
+.donate-desc h4 {
+	font-size: 30px;
+	line-height: normal;
+	text-align: left;
+}
+.donate-form-header h3 {
+	color: #fff !important;
+	font-size: 1.6em !important;
+	text-align: center !important;
+}
+.donate-form-header {
+	background-color: #000;
+	padding: 10px;
+	border-radius: 10px;
+	text-align: center;
+	margin-bottom: -5px;
+	z-index: 999;
+	position: relative;
+}
+/*.programs-hero-image:after {
+	background: none;
+}*/
+#give-lively-widget {
+	background: rgba(255, 250, 250, .8);
+	padding: 10px;
+	border-left: 1px solid #aaa;
+	border-right: 1px solid #aaa;
+	min-height: 200px;
+}
+#donate-form-footer {
+	background: rgba(255, 250, 250, .8);
+	border-radius: 0 0 10px 10px;
+	text-align: center;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #aaa;
+	border-left: 1px solid #aaa;
+	border-right: 1px solid #aaa;
+}
+#donate-form-footer a {
+	text-decoration: underline;
+}
+#donate-form-footer a:hover {
+	color: #5f5f5f;
+}
+.donate-title-bar {
+	display: none;
+}
+.page-template-page_donate main.content .programs-hero-image .wrap {
+	width: 90%;
+}
+.page-template-page_donate main.content .programs-hero-image h4 {
+	font-size: 30px !important;
+	line-height: normal !important;
+	text-align: left !important;
+}
+/* end donation css */
+
+/* Video */
+
+#myVideo {
+	position: relative;
+	top: 0;
+	bottom: 0;
+	min-width: 100%;
+}
+.programs-hero-image video#myVideo {
+	max-width: inherit;
+	width: 100%;
+	height: auto;
+	position: absolute;
+	z-index: 0;
+	top: 0;
+	left: 0;
+}
+/* End video */
+
+/* specific to home page */
+
+.home .home-section-3, .home-section-4 {
+	position: relative;
+	padding: 0 3em;
+}
+
+.home .programs-hero-image .hero-content {
+	display: inline-block;
+	position: relative;
+	z-index: 999;
+	margin-left: 2em;
+}
+.home .programs-hero-image .hero-content .donate-desc {
+	width: 75%;
+	margin-top: 5em;
+	padding-left: 2em;
+	float: left;
+	text-align: left;
+}
+.home .donate-desc h4 {
+	text-align: left !important;
+}
+.home .content article.entry {
+	width: 100% !important;
+	padding: 0 !important;
+	margin: 0 auto !important;
+}
+.home .programs-hero-image .hero-content {
+	padding-top: 100px;
+	width: 100vw;
+	height: calc(66.67vw * (9/16));
+}
+/* end home page settings */
+
+/* mobile devices max-width 767
+ * hide real-time-ebtrt content */
+
+@media only screen and (max-width:768px) {
+	/* hide on mobile devices */
+	.real-time-data.entry-content {
+	display: none;
+	}
+}
+/* end mobile devices */
+
+.single-logo-container a {
+	background-color: #fff !important;
+	border: none !important;
+}
+/* Donation css */
+
+.gl-modal.is-open {
+	z-index: 10;
+	position: relative;
+}
+.programs-hero-image .hero-content .donate-desc {
+	width: 65%;
+	margin-top: 0;
+	padding-left: 50px
+}
+.programs-hero-image .hero-content {
+	padding-top: 58px;
+}
+/* media min-width 769 */
+
+@media only screen and (min-width:769px) {
+	.programs-hero-image .hero-content .donate-desc, .page-template-page_donate main.content .programs-hero-image .hero-content .donate-desc {
+	width: 65%;
+	margin-top: 0;
+	}
+	.programs-hero-image .hero-content {
+	padding-top: 58px;
+	padding-left: 3em;
+	}
+	.gl-widget__donation-submit-button, .gl-widget__input-group {
+	max-width: 100% !important;
+	}
+	/*.gl-widget__google-pay-button img {
+	max-width: 17%;
+	position: relative;
+	}*/
+	/* google pay button */
+.gl-widget__google-pay-button img {
+    margin-left: 2px!important;
+    padding-top: 4px!important;
+    vertical-align: middle!important;
+    width: 12% !important;
+    z-index: 9999 !important;
+    position: relative !important;
+}
+	.programs-hero-image .hero-content .donate-desc, .page-template-page_donate main.content .programs-hero-image .hero-content .donate-desc {
+	width: 40% !important;
+	margin-top: 0 !important;
+	padding-left: 0 !important;
+	float: left !important;
+	text-align: left !important;
+	}
+	.page-template-page_donate .donate-form {
+	width: 40%;
+	padding: 1em;
+	}
+	div#give-lively-widget, div.donate-form-header {
+	clear: both;
+	}
+	.home .donate-desc h4 {
+	font-size: 2.5em;
+	}
+  .home-section-2 {
+	padding: 3em;
+	}
+	.hide-desktop {
+		display:none;
+	}
+}
+/* mobile devices max width 539 */
+@media only screen and (max-width:539px) {
+	/* hide on mobile devices */
+	.real-time-data.entry-content {
+	display: none;
+	}
+}
+@media only screen and (max-width:768px) {
+	.programs-hero-image h4 {
+	font-size: 1.25em !important;
+	line-height: normal !important;
+	}
+	.home .programs-hero-image h1, .home .programs-hero-image h2 {
+	font-size: 1.5em;
+	line-height: normal;
+	}
+	.home .programs-hero-image .hero-content {
+	padding-left: 0;
+	margin: 0;
+	}
+	.home .programs-hero-image .hero-content .donate-desc {
+	width: 100%;
+	padding: 1em;
+	margin-top: 0;
+	}
+	.programs-hero-image {
+	padding-top: 0;
+	}
+	.programs-hero-image .hero-content {
+	padding-top: 1em;
+	}
+	.home-section-4, .home-section-2 {
+	padding: 1em;
+	}
+	.page-template-page_donate .donate-form {
+	width: 100%;
+	padding: 0 1.5em;
+	}
+	.hide-phone {
+		display:none;
+	}
+}
+/* end mobile devices */
+
+/* large screen */
+@media screen and (min-width:1200px) {
+	.site-container .site-inner, .site-container .wrap, .page-template-page_donate main.content {
+	max-width: 100% !important;
+	}
+}
+main article.entry:first-of-type {
+    padding-top: 0 !important;
+}
